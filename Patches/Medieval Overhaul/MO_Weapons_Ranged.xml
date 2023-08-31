@@ -172,7 +172,7 @@
 						<hasStandardCommand>true</hasStandardCommand>
 						<defaultProjectile>Projectile_HuntingArrow_Stone</defaultProjectile>
 						<warmupTime>1.2</warmupTime>
-						<range>16</range>
+						<range>28</range>
 						<soundCast>Bow_Recurve</soundCast>
 					</Properties>
 					<AmmoUser>
