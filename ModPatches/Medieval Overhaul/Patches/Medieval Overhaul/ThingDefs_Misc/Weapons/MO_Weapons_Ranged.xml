@@ -249,4 +249,40 @@
 		</weaponTags>
 	</Operation>
 
+	<!-- ===== Arquebus ===== -->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>DankPyon_Arquebus</defName>
+		<statBases>
+			<Bulk>8</Bulk>
+			<SwayFactor>1.22</SwayFactor>
+			<ShotSpread>0.36</ShotSpread>
+			<SightsEfficiency>0.85</SightsEfficiency>
+			<RangedWeapon_Cooldown>0.85</RangedWeapon_Cooldown>
+		</statBases>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>True</hasStandardCommand>
+			<defaultProjectile>Bullet_Arquebus_Ball</defaultProjectile>
+			<warmupTime>1.33</warmupTime>
+			<range>28</range>
+			<soundCast>Shot_Shotgun_NoRack</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>1</magazineSize>
+			<reloadTime>6.5</reloadTime>
+			<ammoSet>AmmoSet_HandgonneShot</ammoSet>
+			<AmmoGenPerMagOverride>1</AmmoGenPerMagOverride>
+		</AmmoUser>
+		<FireModes>
+			<aiAimMode>AimedShot</aiAimMode>
+		</FireModes>
+		<weaponTags>
+			<li>NeolithicRangedHeavy</li>
+			<li>NeolithicRangedChief</li>
+			<li>CE_TwoHandedWeapon</li>
+		</weaponTags>
+	</Operation>
+
 </Patch>
