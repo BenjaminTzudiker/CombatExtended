@@ -713,7 +713,7 @@
 
 	<ThingDef ParentName="BlunderbussShotBullet">
 		<defName>Bullet_Handgonne_Pellet</defName>
-		<label>lead pellet</label>
+		<label>handgonne pellet</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>10</damageAmountBase>
 			<pelletCount>6</pelletCount>
@@ -741,12 +741,76 @@
 
 	<ThingDef ParentName="MusketBallBullet">
 		<defName>Bullet_Handgonne_Ball</defName>
-		<label>lead ball</label>
+		<label>handgonne ball</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>24</damageAmountBase>
 			<armorPenetrationSharp>4</armorPenetrationSharp>
 			<armorPenetrationBlunt>14</armorPenetrationBlunt>
 			<speed>72</speed>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_ProjectileFleck">
+				<FleckDatas>
+					<li>
+						<startDelayTick>0</startDelayTick>
+						<fleck>Fleck_CEBlackpowderSmokeShort</fleck>
+						<emissionsPerTick>4</emissionsPerTick>
+						<flecksPerEmission>1</flecksPerEmission>
+						<cutoffTickRange>3~3</cutoffTickRange>
+						<scale>2.0~2.5</scale>
+					</li>
+				</FleckDatas>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!-- ===== Arquebus Ammos ===== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_ArquebusShot</defName>
+		<label>Arquebus Shot</label>
+		<ammoTypes>
+			<Ammo_BlunderbussShot>Bullet_Arquebus_Pellet</Ammo_BlunderbussShot>
+			<Ammo_MusketBall>Bullet_Arquebus_Ball</Ammo_MusketBall>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<ThingDef ParentName="BlunderbussShotBullet">
+		<defName>Bullet_Arquebus_Pellet</defName>
+		<label>arquebus pellet</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>10</damageAmountBase>
+			<pelletCount>6</pelletCount>
+			<armorPenetrationSharp>1.75</armorPenetrationSharp>
+			<armorPenetrationBlunt>5</armorPenetrationBlunt>
+			<spreadMult>12.5</spreadMult>
+			<speed>70</speed>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_ProjectileFleck">
+				<FleckDatas>
+					<li>
+						<startDelayTick>0</startDelayTick>
+						<fleck>Fleck_CEBlackpowderSmoke</fleck>
+						<emissionsPerTick>1</emissionsPerTick>
+						<flecksPerEmission>1</flecksPerEmission>
+						<cutoffTickRange>2</cutoffTickRange>
+						<scale>1.5~1.7</scale>
+						<originOffset>0.0~2.5</originOffset>
+					</li>
+				</FleckDatas>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="MusketBallBullet">
+		<defName>Bullet_Arquebus_Ball</defName>
+		<label>arquebus ball</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>28</damageAmountBase>
+			<armorPenetrationSharp>6</armorPenetrationSharp>
+			<armorPenetrationBlunt>20</armorPenetrationBlunt>
+			<speed>80</speed>
 		</projectile>
 		<comps>
 			<li Class="CombatExtended.CompProperties_ProjectileFleck">
